@@ -9,8 +9,9 @@
         <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
             <h1>Checkout</h1>
             <h4>Your total: ${{$total}}</h4>
-            <div class="alert alert-danger {{! Session::has('error') ? 'hidden' : ''}}" id="charge-error" >
-                {{Session::get('error')}}}
+            <div class="alert alert-danger {{ !Session::has('error')  ? 'd-none' : ''}}" id="charge-error" >
+                {{Session::get('error')}}
+
             </div>
             <form action="{{route('checkout')}}" method="post" id="checkout-form" >
                 <div class="row">

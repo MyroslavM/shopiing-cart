@@ -18,6 +18,7 @@ class ProductController extends Controller
 
         $products = Product::all();
         return view('shop.index', ['products' => $products]);
+
     }
 
     public function getAddToCart(Request $request, $id){
@@ -28,6 +29,7 @@ class ProductController extends Controller
 
         $request->session()->put('cart', $cart);
         //dd($request->session()->get('cart'));
+
         return redirect()->route('product.index');
     }
 
@@ -41,23 +43,29 @@ class ProductController extends Controller
     }
 
     public function getCheckout(){
+        //dd(session()->get('error'));
         if (!Session::has('cart')){
             return view('shop.shopping-cart', ['products' => null]);
         }
+
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
         $total =$cart->totalPrice;
         return view('shop.checkout', ['total' => $total]);
+       // dd($e->getMessage());
     }
 
     public function postCheckout(Request $request){
+
         if (!Session::has('cart')){
             return redirect()->route('shop.shoppingCart');
         }
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
 
+        //
         Stripe::setApiKey('sk_test_0HK2Ch11Qt6wmMxq0GjVzB0D00WapQ3EPU');
+//        dd(session()->get('error'));
         try{
             $charge = Charge::create(array([
                 "amount" => $cart->totalPrice * 100,
@@ -72,6 +80,7 @@ class ProductController extends Controller
             $order->paymend_id =$charge->id;
 
             Auth::user()->orders()->save($order);
+
         }catch (\Exception $e){
             return redirect()->route('checkout')->with('error', $e->getMessage());
         }

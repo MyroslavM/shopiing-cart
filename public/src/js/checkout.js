@@ -3,6 +3,7 @@ var stripe = Stripe('pk_test_77V9uBKSZEiIv3nYC9AYegYh00nvxemSIk');
 
 var $form = $('#checkout-form');
 $form.submit(function (event) {
+    debugger
     $('#charge-error').addClass('hidden');
     $form.find('button').prop('disabled', true);
     stripe.card.createToken({
@@ -17,6 +18,7 @@ $form.submit(function (event) {
 
 function spriteResponseHandler(status, response) {
     if (response.error){
+        debugger
         $('#charge-error').removeClass('hidden');
         $('#charge-error').text(response.error.message);
         $form.find('button').prop('disable', false);

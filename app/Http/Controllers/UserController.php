@@ -41,7 +41,9 @@ class UserController extends Controller
         return redirect()->back();
     }
     public function getProfile(){
-        return view('user.profile');
+        $users = User::all();
+        return view('user.profile', ['users' => $users]);
+
     }
 
     public function getLogout(){
