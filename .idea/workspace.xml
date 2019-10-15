@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="306341e8-4bf6-4b26-8eae-1bb22534faed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_20_184603_create_user_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_20_184603_create_user_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/js/checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/js/checkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/shop/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shop/checkout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -195,7 +188,7 @@
       <workItem from="1570523963789" duration="1341000" />
       <workItem from="1570564022133" duration="2866000" />
       <workItem from="1570644210225" duration="1487000" />
-      <workItem from="1571048315742" duration="2921000" />
+      <workItem from="1571048315742" duration="3330000" />
     </task>
     <servers />
   </component>
