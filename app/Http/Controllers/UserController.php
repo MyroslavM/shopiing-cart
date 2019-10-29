@@ -64,20 +64,9 @@ class UserController extends Controller
 
     public function updateProfile(Request $request)
     {
-
-        $user = Auth::User([
-
-        'last_name' => $request->input('last_name'),
-        'phone_number' => $request->input('phone_number'),
-        'age' => $request->input('age'),
-        'name' => $request->input('name')
-        ]);
-        $input = $request->only('name','last_name','phone_number','age');
-        $user->update($input);
-
+        Auth::User()->update($request->all());
 
         return redirect()->route('user.profile');
-        //return view('user.edit-profile', ['user' => Auth::user()]);
     }
 
 }
