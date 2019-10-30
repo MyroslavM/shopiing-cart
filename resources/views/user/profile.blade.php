@@ -6,7 +6,7 @@
         </div>
 
         <div class="col-md-9 col-md-offset-9">
-            <img src="{{$user->photo}}" alt="" height="150px">
+            <img src="{{$user->photo}}" alt="Your photo" height="150px">
             <h4>{{$user->name}}</h4>
             <h4>{{$user->last_name}}</h4>
             <h5>{{$user->phone_number}}</h5>
