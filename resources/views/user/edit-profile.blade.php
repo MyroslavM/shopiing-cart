@@ -8,7 +8,7 @@
         <h1> Edit Profile</h1>
     </div>
         <div class="col-md-4 col-md-offset-4">
-            <form action="{{route('user.update-profile')}}" method="post" id="checkout-form" >
+            <form action="{{route('user.update-profile')}}" method="post">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="form-group">
