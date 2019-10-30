@@ -1,16 +1,4 @@
 <?php
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/',[
     'uses' => 'ProductController@getIndex',
     'as'   => 'product.index'
@@ -31,7 +19,6 @@ Route::post('/checkout',[
     'uses' => 'UserController@postCheckout',
     'as'   => 'checkout'
 ]);
-
 Route::group(['prefix' => 'user'], function (){
     Route::group(['middleware' => 'guest'], function (){
         Route::get('/signup',[
@@ -50,7 +37,6 @@ Route::group(['prefix' => 'user'], function (){
             'uses' => 'UserController@postSignin',
             'as'   => 'user.signin'
         ]);
-
         });
     Route::group(['middleware' => 'auth'], function (){
         Route::get('/profile',[
