@@ -7,8 +7,6 @@
     <div class="col-md-4 col-md-offset-4">
         <h1> Edit Profile</h1>
     </div>
-{{--</div>--}}
-{{--    <div class="row">--}}
         <div class="col-md-4 col-md-offset-4">
             <form action="{{route('user.update-profile')}}" method="post" id="checkout-form" >
                 <div class="row">
